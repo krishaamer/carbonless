@@ -26,8 +26,6 @@ import {
   FiHome,
   FiTrendingUp,
   FiCompass,
-  FiStar,
-  FiSettings,
   FiMenu,
   FiBell,
   FiChevronDown,
@@ -41,9 +39,9 @@ interface LinkItemProps {
   url: string;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: "Overview", icon: FiHome, url: "/" },
-  { name: "Materials", icon: FiTrendingUp, url: "/" },
-  { name: "Build", icon: FiCompass, url: "/explore" },
+  { name: "Materials", icon: FiHome, url: "/" },
+  { name: "Build", icon: FiTrendingUp, url: "/build" },
+  { name: "Compare", icon: FiCompass, url: "/compare" },
 ];
 
 export default function SidebarWithHeader({
@@ -98,7 +96,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
     >
       <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
         <Text fontSize="2xl" fontFamily="Poppins" fontWeight="bold">
-          CarbonHunt
+          Carbonless
         </Text>
         <Text
           display={{ base: "flex", md: "none" }}
@@ -184,7 +182,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
         fontFamily="Poppins"
         fontWeight="bold"
       >
-        CarbonHunt
+        Carbonless
       </Text>
 
       <HStack spacing={{ base: "0", md: "6" }}>

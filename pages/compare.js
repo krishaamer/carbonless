@@ -4,7 +4,7 @@ import MultiDragDrop from "../components/MultiDragDrop";
 export default function Index() {
   return (
     <SidebarWithHeader>
-      <MultiDragDrop />
+      Compare will be here
     </SidebarWithHeader>
   );
 }
