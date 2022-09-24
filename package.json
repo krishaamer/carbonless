@@ -1,6 +1,6 @@
 {
-  "name": "dnd-dropshadow",
-  "version": "0.1.0",
+  "name": "Carbonless",
+  "version": "1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
