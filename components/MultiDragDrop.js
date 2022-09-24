@@ -1,4 +1,4 @@
-import { Flex, Heading, Text, Button } from "@chakra-ui/react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 import React, { useState } from "react";
 import { DragDropContext } from "react-beautiful-dnd";
