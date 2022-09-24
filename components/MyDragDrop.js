@@ -1,10 +1,9 @@
 import { Flex, Heading, Text } from "@chakra-ui/react";
-import { curry } from "lodash";
 import dynamic from "next/dynamic";
 import React, { useState } from "react";
 import { DragDropContext } from "react-beautiful-dnd";
 
-const Column = dynamic(() => import("../src/Column"), { ssr: false });
+const Column = dynamic(() => import("./Column.js"), { ssr: false });
 
 const reorderTasks = (tasks, startIndex, endIndex) => {
   const newTaskList = Array.from(tasks);
