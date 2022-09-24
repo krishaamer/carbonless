@@ -1,7 +1,7 @@
-import SidebarWithHeader from "../components/SidebarWithHeader.tsx";
+import SidebarWithHeader from "../components/shared/SidebarWithHeader.tsx";
 import { NextSeo } from "next-seo";
 import { Flex, Heading } from "@chakra-ui/react";
-import MyChart from "../components/MyChart";
+import MyChart from "../components/compare/MyChart";
 
 export const data1 = {
   labels: [

@@ -1,5 +1,5 @@
-import SidebarWithHeader from "../components/SidebarWithHeader.tsx";
-import MyDragDrop from "../components/MyDragDrop";
+import SidebarWithHeader from "../components/shared/SidebarWithHeader.tsx";
+import MyDragDrop from "../components/browse/MyDragDrop";
 import { NextSeo } from "next-seo";
 
 
