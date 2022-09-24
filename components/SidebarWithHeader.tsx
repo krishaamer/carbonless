@@ -39,7 +39,7 @@ interface LinkItemProps {
   url: string;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: "Materials", icon: FiHome, url: "/" },
+  { name: "Browse", icon: FiHome, url: "/" },
   { name: "Build", icon: FiTrendingUp, url: "/build" },
   { name: "Compare", icon: FiCompass, url: "/compare" },
 ];

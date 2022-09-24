@@ -1,4 +1,5 @@
 import SidebarWithHeader from "../components/SidebarWithHeader.tsx";
+import { NextSeo } from "next-seo";
 import { Flex, Heading } from "@chakra-ui/react";
 import MyChart from "../components/MyChart";
 
@@ -56,26 +57,29 @@ export const data2 = {
 
 export default function Index() {
   return (
-    <SidebarWithHeader>
-      <Flex
-        bg="column-bg"
-        flexDir="row"
-        position="relative"
-        backgroundColor="#eee"
-      >
-        <Flex py="4rem" flexDir="column" align="center" width="50%">
-          <Heading fontSize="3xl" fontWeight={600}>
-            Direction 1
-          </Heading>
-          <MyChart data={data1} />
+    <>
+      <NextSeo title="Compare" />
+      <SidebarWithHeader>
+        <Flex
+          bg="column-bg"
+          flexDir="row"
+          position="relative"
+          backgroundColor="#eee"
+        >
+          <Flex py="4rem" flexDir="column" align="center" width="50%">
+            <Heading fontSize="3xl" fontWeight={600}>
+              Direction 1
+            </Heading>
+            <MyChart data={data1} />
+          </Flex>
+          <Flex py="4rem" flexDir="column" align="center" width="50%">
+            <Heading fontSize="3xl" fontWeight={600}>
+              Direction 2
+            </Heading>
+            <MyChart data={data2} />
+          </Flex>
         </Flex>
-        <Flex py="4rem" flexDir="column" align="center" width="50%">
-          <Heading fontSize="3xl" fontWeight={600}>
-            Direction 2
-          </Heading>
-          <MyChart data={data2} />
-        </Flex>
-      </Flex>
-    </SidebarWithHeader>
+      </SidebarWithHeader>
+    </>
   );
 }

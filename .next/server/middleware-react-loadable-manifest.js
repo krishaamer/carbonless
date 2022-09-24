@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST={"../components/MyDragDrop.js -> ./Column.js":{"id":"../components/MyDragDrop.js -> ./Column.js","files":["static/chunks/components_Column_js.js"]}}
+self.__REACT_LOADABLE_MANIFEST={"../components/MultiDragDrop.js -> ./MultiColumn.js":{"id":"../components/MultiDragDrop.js -> ./MultiColumn.js","files":["static/chunks/components_MultiColumn_js.js"]},"../components/MyDragDrop.js -> ./Column.js":{"id":"../components/MyDragDrop.js -> ./Column.js","files":["static/chunks/components_Column_js.js"]}}
