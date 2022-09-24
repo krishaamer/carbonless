@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode } from "react";
 import {
   IconButton,
   Avatar,
@@ -21,7 +21,7 @@ import {
   MenuDivider,
   MenuItem,
   MenuList,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 import {
   FiHome,
   FiTrendingUp,
@@ -29,9 +29,9 @@ import {
   FiMenu,
   FiBell,
   FiChevronDown,
-} from 'react-icons/fi';
-import { IconType } from 'react-icons';
-import { ReactText } from 'react';
+} from "react-icons/fi";
+import { IconType } from "react-icons";
+import { ReactText } from "react";
 
 interface LinkItemProps {
   name: string;
@@ -95,9 +95,11 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
       {...rest}
     >
       <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-        <Text fontSize="2xl" fontFamily="Poppins" fontWeight="bold">
-          Carbonless
-        </Text>
+        <Link href="/">
+          <Text fontSize="2xl" fontFamily="Poppins" fontWeight="bold">
+            Carbonless
+          </Text>
+        </Link>
         <Text
           display={{ base: "flex", md: "none" }}
           fontSize="md"
@@ -124,7 +126,11 @@ interface NavItemProps extends FlexProps {
 }
 const NavItem = ({ icon, url, children, ...rest }: NavItemProps) => {
   return (
-    <Link href={url} style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
+    <Link
+      href={url}
+      style={{ textDecoration: "none" }}
+      _focus={{ boxShadow: "none" }}
+    >
       <Flex
         align="center"
         p="4"
@@ -133,16 +139,17 @@ const NavItem = ({ icon, url, children, ...rest }: NavItemProps) => {
         role="group"
         cursor="pointer"
         _hover={{
-          bg: 'cyan.400',
-          color: 'white',
+          bg: "cyan.400",
+          color: "white",
         }}
-        {...rest}>
+        {...rest}
+      >
         {icon && (
           <Icon
             mr="4"
             fontSize="16"
             _groupHover={{
-              color: 'white',
+              color: "white",
             }}
             as={icon}
           />
@@ -176,14 +183,16 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
         aria-label="open menu"
         icon={<FiMenu />}
       />
-      <Text
-        display={{ base: "flex", md: "none" }}
-        fontSize="2xl"
-        fontFamily="Poppins"
-        fontWeight="bold"
-      >
-        Carbonless
-      </Text>
+      <Link href="/">
+        <Text
+          display={{ base: "flex", md: "none" }}
+          fontSize="2xl"
+          fontFamily="Poppins"
+          fontWeight="bold"
+        >
+          Carbonless
+        </Text>
+      </Link>
 
       <HStack spacing={{ base: "0", md: "6" }}>
         <IconButton
