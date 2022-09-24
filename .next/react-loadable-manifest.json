@@ -1,8 +1,8 @@
 {
-  "../components/MyDragDrop.js -> ./Column.js": {
-    "id": "../components/MyDragDrop.js -> ./Column.js",
+  "../components/MultiDragDrop.js -> ./MultiColumn.js": {
+    "id": "../components/MultiDragDrop.js -> ./MultiColumn.js",
     "files": [
-      "static/chunks/components_Column_js.js"
+      "static/chunks/components_MultiColumn_js.js"
     ]
   }
 }
