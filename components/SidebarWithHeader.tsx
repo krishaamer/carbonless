@@ -41,11 +41,9 @@ interface LinkItemProps {
   url: string;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: "Home", icon: FiHome, url: "/" },
-  { name: "Trending", icon: FiTrendingUp, url: "/" },
-  { name: "Explore", icon: FiCompass, url: "/explore" },
-  { name: "Favourites", icon: FiStar, url: "/" },
-  { name: "Settings", icon: FiSettings, url: "/" },
+  { name: "Overview", icon: FiHome, url: "/" },
+  { name: "Materials", icon: FiTrendingUp, url: "/" },
+  { name: "Build", icon: FiCompass, url: "/explore" },
 ];
 
 export default function SidebarWithHeader({
@@ -99,13 +97,13 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
       {...rest}
     >
       <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-        <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
+        <Text fontSize="2xl" fontFamily="Poppins" fontWeight="bold">
           CarbonHunt
         </Text>
         <Text
           display={{ base: "flex", md: "none" }}
           fontSize="md"
-          fontFamily="monospace"
+          fontFamily="Poppins"
           fontWeight="bold"
         >
           Find good material
@@ -183,7 +181,7 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
       <Text
         display={{ base: "flex", md: "none" }}
         fontSize="2xl"
-        fontFamily="monospace"
+        fontFamily="Poppins"
         fontWeight="bold"
       >
         CarbonHunt

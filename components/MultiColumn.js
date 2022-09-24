@@ -1,8 +1,17 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { Draggable, Droppable } from "react-beautiful-dnd";
 
-const grid = 8;
+const grid = 6;
+
+const titles = [
+  "Foundation",
+  "Columns and load-bearing vertical structures",
+  "Floor slabs, ceilings",
+  "Roof",
+  "External walls and facade",
+  "Windows",
+];
 
 const getItemStyle = (isDragging, draggableStyle) => ({
   // some basic styles to make the items look a bit nicer
@@ -20,19 +29,21 @@ const getItemStyle = (isDragging, draggableStyle) => ({
 const getListStyle = (isDraggingOver) => ({
   background: isDraggingOver ? "lightblue" : "lightgrey",
   padding: grid,
-  width: 250,
+  width: 200,
 });
 
-const Column = ({ el, ind, doRemove }) => {
+const Column = ({ el, ind }) => {
+
   return (
     <Flex
       rounded="3px"
       bg="column-bg"
-      w="600px"
-      h="610px"
+      w="400px"
+      h="600px"
       flexDir="column"
       position="relative"
     >
+      <Text size="2xl" color={"#fff"}>{titles?.at(ind)}</Text>
       <Droppable key={ind} droppableId={`${ind}`}>
         {(provided, snapshot) => (
           <div

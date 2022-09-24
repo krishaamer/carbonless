@@ -39,7 +39,14 @@ const move = (source, destination, droppableSource, droppableDestination) => {
 };
 
 export default function MultiDragDrop() {
-  const [state, setState] = useState([getItems(10), getItems(5, 10)]);
+  const [state, setState] = useState([
+    getItems(10),
+    getItems(5, 10),
+    getItems(5, 10),
+    getItems(5, 10),
+    getItems(5, 10),
+    getItems(5, 10),
+  ]);
 
   function onDragEnd(result) {
     const { source, destination } = result;
@@ -67,50 +74,30 @@ export default function MultiDragDrop() {
   }
 
   return (
-    <div>
-      <Button
-        aria-label="Add new group"
-        icon={<FiPlus />}
-        onClick={() => {
-          setState([...state, []]);
-        }}
-      >
-        Add new group
-      </Button>
-      <Button
-        aria-label="Add new group"
-        icon={<FiPlus />}
-        onClick={() => {
-          setState([...state, getItems(1)]);
-        }}
-      >
-        Add new item
-      </Button>
-      <div style={{ display: "flex" }}>
-        <DragDropContext onDragEnd={onDragEnd}>
-          <Flex
-            flexDir="column"
-            bg="main-bg"
-            minH="100vh"
-            w="full"
-            color="white-text"
-            pb="2rem"
-          >
-            <Flex py="4rem" flexDir="column" align="center">
-              <Heading fontSize="3xl" fontWeight={600}>
-                Explore
-              </Heading>
-              <Text fontSize="20px" fontWeight={600} color="subtle-text"></Text>
-            </Flex>
-
-            <Flex justify="center" px="4rem">
-              {state.map((el, ind) => (
-                <MultiColumn key={ind} el={el} ind={ind} />
-              ))}
-            </Flex>
+    <div style={{ display: "flex" }}>
+      <DragDropContext onDragEnd={onDragEnd}>
+        <Flex
+          flexDir="column"
+          bg="main-bg"
+          minH="100vh"
+          w="full"
+          color="white-text"
+          pb="2rem"
+        >
+          <Flex py="4rem" flexDir="column" align="center">
+            <Heading fontSize="3xl" fontWeight={600}>
+              Choose Materials
+            </Heading>
+            <Text fontSize="20px" fontWeight={600} color="subtle-text"></Text>
           </Flex>
-        </DragDropContext>
-      </div>
+
+          <Flex justify="center" px="4rem">
+            {state.map((el, ind) => (
+              <MultiColumn key={ind} el={el} ind={ind} />
+            ))}
+          </Flex>
+        </Flex>
+      </DragDropContext>
     </div>
   );
 }
