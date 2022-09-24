@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST={"../components/MyDragDrop.js -> ../src/Column":{"id":"../components/MyDragDrop.js -> ../src/Column","files":["static/chunks/src_Column_js.js"]}}
