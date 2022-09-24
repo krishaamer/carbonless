@@ -43,7 +43,7 @@ const Column = ({ el, ind }) => {
       flexDir="column"
       position="relative"
     >
-      <Text size="2xl" color={"#fff"}>{titles?.at(ind)}</Text>
+      <Text size="2xl" color={"#fff"} height="80px" backgroundColor="#222" rounded="3xl" padding="3">{titles?.at(ind)}</Text>
       <Droppable key={ind} droppableId={`${ind}`}>
         {(provided, snapshot) => (
           <div

@@ -10,7 +10,7 @@ const MultiColumn = dynamic(() => import("./MultiColumn.js"), { ssr: false });
 const getItems = (count, offset = 0) =>
   Array.from({ length: count }, (v, k) => k).map((k) => ({
     id: `item-${k + offset}-${new Date().getTime()}`,
-    content: `item ${k + offset}`,
+    content: `Material ${k + offset}`,
   }));
 
 const reorder = (list, startIndex, endIndex) => {
@@ -41,11 +41,11 @@ const move = (source, destination, droppableSource, droppableDestination) => {
 export default function MultiDragDrop() {
   const [state, setState] = useState([
     getItems(10),
-    getItems(5, 10),
-    getItems(5, 10),
-    getItems(5, 10),
-    getItems(5, 10),
-    getItems(5, 10),
+    getItems(3, 21),
+    getItems(5, 26),
+    getItems(7, 32),
+    getItems(5, 38),
+    getItems(8, 48),
   ]);
 
   function onDragEnd(result) {
